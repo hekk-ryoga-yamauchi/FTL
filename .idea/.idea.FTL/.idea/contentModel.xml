@@ -807,6 +807,13 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Contracts" t="Include">
+            <e p="Jump" t="Include">
+              <e p="JumpContract.cs" t="Include" />
+              <e p="NodeContract.cs" t="Include" />
+              <e p="NodesContract.cs" t="Include" />
+            </e>
+          </e>
           <e p="Installers" t="Include">
             <e p="BattleInstaller.cs" t="Include" />
             <e p="CustomInstaller.cs" t="Include" />
@@ -817,16 +824,34 @@
           <e p="MasterDatas" t="Include">
             <e p="RoomTypeMasterData.cs" t="Include" />
           </e>
+          <e p="Models" t="Include">
+            <e p="Jump" t="Include">
+              <e p="JumpModel.cs" t="Include" />
+              <e p="PlayerModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Presenters" t="Include">
+            <e p="Jump" t="Include">
+              <e p="NodePresenter.cs" t="Include" />
+              <e p="NodesPresenter.cs" t="Include" />
+            </e>
+          </e>
           <e p="Repositories" t="Include">
             <e p="RoomTypeMasterDataRepository.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
-            <e p="BattleView.cs" t="Include" />
-            <e p="CustomView.cs" t="Include" />
-            <e p="DoorView.cs" t="Include" />
-            <e p="JumpButtonView.cs" t="Include" />
-            <e p="RoomView.cs" t="Include" />
-            <e p="TitleView.cs" t="Include" />
+            <e p="Jump" t="Include">
+              <e p="NodesView.cs" t="Include" />
+              <e p="NodeView.cs" t="Include" />
+            </e>
+            <e p="Main" t="Include">
+              <e p="BattleView.cs" t="Include" />
+              <e p="CustomView.cs" t="Include" />
+              <e p="DoorView.cs" t="Include" />
+              <e p="JumpButtonView.cs" t="Include" />
+              <e p="RoomView.cs" t="Include" />
+              <e p="TitleView.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>

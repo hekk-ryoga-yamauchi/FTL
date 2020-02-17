@@ -1,3 +1,6 @@
+using Contracts.Jump;
+using Models;
+using Presenters;
 using Zenject;
 
 namespace Installers
@@ -7,6 +10,13 @@ namespace Installers
         public override void InstallBindings()
         {
             Container.Bind<string>().FromInstance("Hello World!");
+            
+            // presenters
+            Container.Bind<INodePresenter>().To<NodePresenter>().AsSingle().NonLazy();
+            Container.Bind<INodesPresenter>().To<NodesPresenter>().AsSingle().NonLazy();
+            
+            // models
+            Container.Bind<IJumpModel>().To<JumpModel>().AsSingle().NonLazy();
         }
 
     }

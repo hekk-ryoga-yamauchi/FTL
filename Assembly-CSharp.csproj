@@ -61,19 +61,28 @@
      <Compile Include="Assets\Framework\ButtonView.cs" />
      <Compile Include="Assets\Framework\PresenterBase.cs" />
      <Compile Include="Assets\Framework\ViewBase.cs" />
+     <Compile Include="Assets\Scripts\Contracts\Jump\JumpContract.cs" />
+     <Compile Include="Assets\Scripts\Contracts\Jump\NodeContract.cs" />
+     <Compile Include="Assets\Scripts\Contracts\Jump\NodesContract.cs" />
      <Compile Include="Assets\Scripts\Installers\BattleInstaller.cs" />
      <Compile Include="Assets\Scripts\Installers\CustomInstaller.cs" />
      <Compile Include="Assets\Scripts\Installers\GameInstaller.cs" />
      <Compile Include="Assets\Scripts\Installers\JumpInstaller.cs" />
      <Compile Include="Assets\Scripts\Installers\TitleInstaller.cs" />
      <Compile Include="Assets\Scripts\MasterDatas\RoomTypeMasterData.cs" />
+     <Compile Include="Assets\Scripts\Models\Jump\JumpModel.cs" />
+     <Compile Include="Assets\Scripts\Models\Jump\PlayerModel.cs" />
+     <Compile Include="Assets\Scripts\Presenters\Jump\NodePresenter.cs" />
+     <Compile Include="Assets\Scripts\Presenters\Jump\NodesPresenter.cs" />
      <Compile Include="Assets\Scripts\Repositories\RoomTypeMasterDataRepository.cs" />
-     <Compile Include="Assets\Scripts\Views\BattleView.cs" />
-     <Compile Include="Assets\Scripts\Views\CustomView.cs" />
-     <Compile Include="Assets\Scripts\Views\DoorView.cs" />
-     <Compile Include="Assets\Scripts\Views\JumpButtonView.cs" />
-     <Compile Include="Assets\Scripts\Views\RoomView.cs" />
-     <Compile Include="Assets\Scripts\Views\TitleView.cs" />
+     <Compile Include="Assets\Scripts\Views\Jump\NodeView.cs" />
+     <Compile Include="Assets\Scripts\Views\Jump\NodesView.cs" />
+     <Compile Include="Assets\Scripts\Views\Main\BattleView.cs" />
+     <Compile Include="Assets\Scripts\Views\Main\CustomView.cs" />
+     <Compile Include="Assets\Scripts\Views\Main\DoorView.cs" />
+     <Compile Include="Assets\Scripts\Views\Main\JumpButtonView.cs" />
+     <Compile Include="Assets\Scripts\Views\Main\RoomView.cs" />
+     <Compile Include="Assets\Scripts\Views\Main\TitleView.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/hekk339/projects/practice/FTL/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

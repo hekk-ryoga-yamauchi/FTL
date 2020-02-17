@@ -2,38 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48d74ae6-fddd-4ae2-8908-72fc15994921" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/BattleInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/CustomInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/JumpInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/TitleInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/BattleView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/CustomView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/TitleView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Contracts/Jump/JumpContract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Contracts/Jump/NodeContract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Contracts/Jump/NodesContract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Models/Jump/JumpModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Models/Jump/PlayerModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Presenters/Jump/NodePresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Presenters/Jump/NodesPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Jump/NodeView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Jump/NodesView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FTL/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FTL/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FTL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FTL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Framework/ButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Framework/ButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Battle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Battle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Custom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Custom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fields/Door.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fields/Room.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fields/wall1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UIs/Power.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UIs/Weapon.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UIs/unit.prefab" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Jump.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Jump.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/DoorView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/DoorView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/JumpButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/JumpButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/RoomView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/RoomView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/JumpInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/JumpInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/BattleView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Main/BattleView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/CustomView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Main/CustomView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/DoorView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Main/DoorView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/JumpButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Main/JumpButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/RoomView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Main/RoomView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/TitleView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Main/TitleView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/5cffba-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/5cffba-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/c67512-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/c67512-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler4.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,23 +54,34 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/CustomView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96C9BAFF-A941-4FE5-B4EB-911E74F8F90E/6c/770f6ab4/LineRenderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Presenters/Jump/NodePresenter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/TitleInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/TitleView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/JumpButtonView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/CustomInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/BattleView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Presenters/Jump/NodesPresenter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Framework/ViewBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Repositories/RoomTypeMasterDataRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Models/Jump/PlayerModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/BattleInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Framework/PresenterBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Main/DoorView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Models/Jump/JumpModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Contracts/Jump/JumpContract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Main/CustomView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Contracts/Jump/NodeContract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Jump/NodeView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Main/TitleView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Main/JumpButtonView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Main/BattleView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Contracts/Jump/NodesContract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MasterDatas/RoomTypeMasterData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Framework/ButtonView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/BattleInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/RoomView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Main/RoomView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/StateCache/Hierarchy/5cffba-mainStage.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Framework/PresenterBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/DoorView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/JumpInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Views/Jump/NodesView.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -78,12 +99,31 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/BattleInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/CustomView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/TitleView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/JumpButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/BattleView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/DoorView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/RoomView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/JumpInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Framework/ButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/JumpButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Main/BattleView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Main/CustomView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Main/DoorView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Main/JumpButtonView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Main/RoomView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Main/TitleView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Presenters/Jump/NodesPresemnter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Contract/Jump.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Contract/Jump/NodeContract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Contracts/Jump/NodeContract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Presenters/Jump/NodePresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Contracts/Jump/NodesContract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Presenters/Jump/NodesPresenter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/PlayerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Contracts/Jump/JumpContract.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/JumpInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Jump/NodeView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Jump/PlayerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Jump/JumpModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Jump/NodesView.cs" />
       </list>
     </option>
   </component>
@@ -125,7 +165,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581909380524</updated>
-      <workItem from="1581909384565" duration="5090000" />
+      <workItem from="1581909384565" duration="10203000" />
     </task>
     <servers />
   </component>
@@ -150,9 +190,9 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2218" y="262" key="RiderGenerateDialog/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1581931851917" />
-    <state x="2063" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1581932719299">
+    <state x="2063" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1581938802799">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2063" y="239" width="672" height="678" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1581932719299" />
+    <state x="2063" y="239" width="672" height="678" key="search.everywhere.popup/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1581938802799" />
   </component>
 </project>
