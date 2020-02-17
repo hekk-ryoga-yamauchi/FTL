@@ -576,17 +576,17 @@
  <Reference Include="UnityEditor.iOS.Extensions">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.0f6/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
- <HintPath>/Users/hekk339/projects/practice/FTL/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
- </Reference>
- <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
- <HintPath>/Users/hekk339/projects/practice/FTL/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
- </Reference>
  <Reference Include="Zenject-usage">
  <HintPath>/Users/hekk339/projects/practice/FTL/Assets/Plugins/Zenject/Source/Usage/Zenject-usage.dll</HintPath>
  </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Mdb">
+ <HintPath>/Users/hekk339/projects/practice/FTL/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Mdb.dll</HintPath>
+ </Reference>
  <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Pdb">
  <HintPath>/Users/hekk339/projects/practice/FTL/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Pdb.dll</HintPath>
+ </Reference>
+ <Reference Include="Zenject.ReflectionBaking.Mono.Cecil">
+ <HintPath>/Users/hekk339/projects/practice/FTL/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="Zenject.ReflectionBaking.Mono.Cecil.Rocks">
  <HintPath>/Users/hekk339/projects/practice/FTL/Assets/Plugins/Zenject/OptionalExtras/ReflectionBaking/Lib/Zenject.ReflectionBaking.Mono.Cecil.Rocks.dll</HintPath>
