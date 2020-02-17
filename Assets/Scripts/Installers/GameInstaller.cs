@@ -1,3 +1,4 @@
+using Models;
 using Zenject;
 
 public class GameInstaller : MonoInstaller
@@ -6,6 +7,7 @@ public class GameInstaller : MonoInstaller
     {
         Container.Bind<string>().FromInstance("Hello World!");
         
-        
+        //Models
+
     }
 }

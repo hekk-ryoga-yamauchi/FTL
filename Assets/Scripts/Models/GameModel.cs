@@ -1,14 +1,15 @@
 using Contracts.Jump;
+using Models.Game;
 
 namespace Models
 {
-    public class JumpModel : IJumpModel
+    public class GameModel
     {
         public PlayerModel PlayerModel { get; private set; }
 
-        private JumpModel()
+        public GameModel()
         {
-            PlayerModel = new PlayerModel(1);
+            PlayerModel = new PlayerModel(0);
         }
     }
 }

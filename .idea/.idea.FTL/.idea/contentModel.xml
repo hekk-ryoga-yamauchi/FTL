@@ -819,16 +819,17 @@
             <e p="CustomInstaller.cs" t="Include" />
             <e p="GameInstaller.cs" t="Include" />
             <e p="JumpInstaller.cs" t="Include" />
+            <e p="ProjectInstaller.cs" t="Include" />
             <e p="TitleInstaller.cs" t="Include" />
           </e>
           <e p="MasterDatas" t="Include">
             <e p="RoomTypeMasterData.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
-            <e p="Jump" t="Include">
-              <e p="JumpModel.cs" t="Include" />
+            <e p="Game" t="Include">
               <e p="PlayerModel.cs" t="Include" />
             </e>
+            <e p="GameModel.cs" t="Include" />
           </e>
           <e p="Presenters" t="Include">
             <e p="Jump" t="Include">
@@ -840,17 +841,18 @@
             <e p="RoomTypeMasterDataRepository.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
-            <e p="Jump" t="Include">
-              <e p="NodesView.cs" t="Include" />
-              <e p="NodeView.cs" t="Include" />
-            </e>
-            <e p="Main" t="Include">
+            <e p="Game" t="Include">
               <e p="BattleView.cs" t="Include" />
               <e p="CustomView.cs" t="Include" />
               <e p="DoorView.cs" t="Include" />
+              <e p="GameView.cs" t="Include" />
               <e p="JumpButtonView.cs" t="Include" />
               <e p="RoomView.cs" t="Include" />
               <e p="TitleView.cs" t="Include" />
+            </e>
+            <e p="Jump" t="Include">
+              <e p="NodesView.cs" t="Include" />
+              <e p="NodeView.cs" t="Include" />
             </e>
           </e>
         </e>

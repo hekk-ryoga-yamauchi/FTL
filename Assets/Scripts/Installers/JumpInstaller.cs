@@ -15,8 +15,6 @@ namespace Installers
             Container.Bind<INodePresenter>().To<NodePresenter>().AsSingle().NonLazy();
             Container.Bind<INodesPresenter>().To<NodesPresenter>().AsSingle().NonLazy();
             
-            // models
-            Container.Bind<IJumpModel>().To<JumpModel>().AsSingle().NonLazy();
         }
 
     }
