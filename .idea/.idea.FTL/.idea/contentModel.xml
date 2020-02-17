@@ -807,7 +807,13 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="GameInstaller.cs" t="Include" />
+          <e p="Installers" t="Include">
+            <e p="BattleInstaller.cs" t="Include" />
+            <e p="CustomInstaller.cs" t="Include" />
+            <e p="GameInstaller.cs" t="Include" />
+            <e p="JumpInstaller.cs" t="Include" />
+            <e p="TitleInstaller.cs" t="Include" />
+          </e>
           <e p="MasterDatas" t="Include">
             <e p="RoomTypeMasterData.cs" t="Include" />
           </e>
@@ -815,9 +821,12 @@
             <e p="RoomTypeMasterDataRepository.cs" t="Include" />
           </e>
           <e p="Views" t="Include">
+            <e p="BattleView.cs" t="Include" />
+            <e p="CustomView.cs" t="Include" />
             <e p="DoorView.cs" t="Include" />
             <e p="JumpButtonView.cs" t="Include" />
             <e p="RoomView.cs" t="Include" />
+            <e p="TitleView.cs" t="Include" />
           </e>
         </e>
       </e>

@@ -7,13 +7,17 @@ namespace Framework
 {
     public abstract class ButtonView : MonoBehaviour
     {
-        protected Button _button = default;
+        private Button _button { get; set; }
 
         public Action OnClicked;
 
 
         [Inject]
-        protected abstract void Construct();
+        protected virtual void Construct()
+        {
+            _button = GetComponent<Button>();
+            _button.onClick.AddListener(OnClick);
+        }
 
         public abstract void OnClick();
     }

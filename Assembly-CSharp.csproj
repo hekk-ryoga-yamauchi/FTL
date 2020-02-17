@@ -61,12 +61,19 @@
      <Compile Include="Assets\Framework\ButtonView.cs" />
      <Compile Include="Assets\Framework\PresenterBase.cs" />
      <Compile Include="Assets\Framework\ViewBase.cs" />
-     <Compile Include="Assets\Scripts\GameInstaller.cs" />
+     <Compile Include="Assets\Scripts\Installers\BattleInstaller.cs" />
+     <Compile Include="Assets\Scripts\Installers\CustomInstaller.cs" />
+     <Compile Include="Assets\Scripts\Installers\GameInstaller.cs" />
+     <Compile Include="Assets\Scripts\Installers\JumpInstaller.cs" />
+     <Compile Include="Assets\Scripts\Installers\TitleInstaller.cs" />
      <Compile Include="Assets\Scripts\MasterDatas\RoomTypeMasterData.cs" />
      <Compile Include="Assets\Scripts\Repositories\RoomTypeMasterDataRepository.cs" />
+     <Compile Include="Assets\Scripts\Views\BattleView.cs" />
+     <Compile Include="Assets\Scripts\Views\CustomView.cs" />
      <Compile Include="Assets\Scripts\Views\DoorView.cs" />
      <Compile Include="Assets\Scripts\Views\JumpButtonView.cs" />
      <Compile Include="Assets\Scripts\Views\RoomView.cs" />
+     <Compile Include="Assets\Scripts\Views\TitleView.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/hekk339/projects/practice/FTL/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
