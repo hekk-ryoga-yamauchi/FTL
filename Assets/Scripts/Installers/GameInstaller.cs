@@ -1,4 +1,5 @@
-using Models;
+using Contracts.Game;
+using Presenters.Game;
 using Zenject;
 
 public class GameInstaller : MonoInstaller
@@ -7,7 +8,10 @@ public class GameInstaller : MonoInstaller
     {
         Container.Bind<string>().FromInstance("Hello World!");
         
-        //Models
+        // Presenters
+        Container.Bind<IUnitsPresenter>().To<UnitsPresenter>().AsSingle().NonLazy();
+
+        //
 
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Views.Main
+namespace Views.Title
 {
     public class TitleView : ButtonView
     {

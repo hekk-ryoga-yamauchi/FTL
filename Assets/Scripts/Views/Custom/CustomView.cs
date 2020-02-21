@@ -1,16 +1,15 @@
 using Framework;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Zenject;
 
-namespace Views.Main
+namespace Views.Custom
 {
-    public class BattleView : ButtonView
+    public class CustomView : ButtonView
     {
-      
+        
         public override void OnClick()
         {
-            SceneManager.LoadSceneAsync("Start");
+            SceneManager.LoadSceneAsync("Main");
         }
     }
 }
