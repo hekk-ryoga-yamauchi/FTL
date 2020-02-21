@@ -1,12 +1,9 @@
+using UnityEngine;
+
 namespace Contracts.Jump
 {
-    public interface INodePresenter
-    {
-        void OnClicked(int id);
-    }
-
     public interface INodeModel
     {
-        
+        Vector3 GetPosition();
     }
 }

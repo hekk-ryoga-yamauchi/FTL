@@ -73,9 +73,11 @@
      <Compile Include="Assets\Scripts\MasterDatas\RoomTypeMasterData.cs" />
      <Compile Include="Assets\Scripts\Models\Game\PlayerModel.cs" />
      <Compile Include="Assets\Scripts\Models\GameModel.cs" />
-     <Compile Include="Assets\Scripts\Presenters\Jump\NodePresenter.cs" />
+     <Compile Include="Assets\Scripts\Models\Jump\NodeModel.cs" />
+     <Compile Include="Assets\Scripts\Models\Jump\NodesModel.cs" />
      <Compile Include="Assets\Scripts\Presenters\Jump\NodesPresenter.cs" />
      <Compile Include="Assets\Scripts\Repositories\RoomTypeMasterDataRepository.cs" />
+     <Compile Include="Assets\Scripts\ViewModels\Jump\NodesViewModel.cs" />
      <Compile Include="Assets\Scripts\Views\Game\BattleView.cs" />
      <Compile Include="Assets\Scripts\Views\Game\CustomView.cs" />
      <Compile Include="Assets\Scripts\Views\Game\DoorView.cs" />

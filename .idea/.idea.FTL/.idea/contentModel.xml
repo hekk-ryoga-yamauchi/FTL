@@ -830,15 +830,23 @@
               <e p="PlayerModel.cs" t="Include" />
             </e>
             <e p="GameModel.cs" t="Include" />
+            <e p="Jump" t="Include">
+              <e p="NodeModel.cs" t="Include" />
+              <e p="NodesModel.cs" t="Include" />
+            </e>
           </e>
           <e p="Presenters" t="Include">
             <e p="Jump" t="Include">
-              <e p="NodePresenter.cs" t="Include" />
               <e p="NodesPresenter.cs" t="Include" />
             </e>
           </e>
           <e p="Repositories" t="Include">
             <e p="RoomTypeMasterDataRepository.cs" t="Include" />
+          </e>
+          <e p="ViewModels" t="Include">
+            <e p="Jump" t="Include">
+              <e p="NodesViewModel.cs" t="Include" />
+            </e>
           </e>
           <e p="Views" t="Include">
             <e p="Game" t="Include">

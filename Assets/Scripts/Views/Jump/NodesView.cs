@@ -1,47 +1,62 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using Contracts.Jump;
 using Framework;
 using Models;
-using Models.Game;
 using UnityEngine;
+using ViewModels.Jump;
 using Zenject;
 
 namespace Views.Jump
 {
     public class NodesView : ViewBase
     {
-        private INodesPresenter _presenter;
         private GameModel _model;
-        
+
         private List<NodeView> _nodeList = new List<NodeView>();
+        private INodesPresenter _presenter;
+        private int _playerCurrentId;
+        private NodeView _playerStayPoint;
 
         [Inject]
-        private void Construct(INodesPresenter presenter, GameModel model)
+        DiContainer _container = null;
+
+
+        public void Init(INodesPresenter presenter, NodesViewModel viewModel, int playerCurrentId)
         {
             _presenter = presenter;
-            _nodeList = GetComponentsInChildren<NodeView>().ToList();
-            _model = model;
-            var enumerator = _nodeList.GetEnumerator();
-            while (enumerator.MoveNext())
-            {
-                SetNearNode(6, enumerator.Current);
-            }
-
-            var playerCurrentId = _model.PlayerModel.CurrentId;
-            var playerStayPoint = _nodeList.FirstOrDefault(x => x.GetId() == playerCurrentId);
-            playerStayPoint.SetIsStay(true);
-            SetNearNode(6,playerStayPoint);
-            playerStayPoint.Init();
+            CreateChildren(viewModel);
+            _playerCurrentId = playerCurrentId;
         }
 
-        private void SetNearNode(int nodesCount,NodeView enumerator )
+        public void CreateChildren(NodesViewModel viewModel)
         {
-            Dictionary<NodeView,float> dic = new Dictionary<NodeView, float>();
+            foreach (var node in viewModel.GetNodes())
+            {
+                var obj = Resources.Load("Jump/Prefabs/node");
+                var instance = _container.InstantiatePrefab(obj, gameObject.transform);
+                instance.transform.position = new Vector3(node.Value.x - 50, node.Value.y - 50, 0);
+                var nodeView = instance.GetComponent<NodeView>();
+                nodeView.Init(node.Key, _presenter);
+                _nodeList.Add(instance.GetComponent<NodeView>());
+            }
+            
+            _nodeList.ForEach(x => SetNearNode(6, x));
+            _playerStayPoint = _nodeList.FirstOrDefault(x => x.GetId() == _playerCurrentId);
+            _playerStayPoint.SetIsStay(true);
+            _playerStayPoint.CreatePlayerEdges();
+        }
+        
+
+        private void SetNearNode(int nodesCount, NodeView enumerator)
+        {
+            Dictionary<NodeView, float> dic = new Dictionary<NodeView, float>();
             foreach (var node in _nodeList)
             {
                 var range = GetRange(enumerator, node.Position);
-                dic.Add(node,range);
+                
+                dic.Add(node, range);
             }
 
             var nears = dic.OrderBy(x => x.Value).Take(nodesCount);

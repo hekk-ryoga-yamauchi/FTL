@@ -3,47 +3,40 @@ using Contracts.Jump;
 using Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Zenject;
 
 namespace Views.Jump
 {
     public class NodeView : ViewBase
     {
-        [SerializeField]
         private int _id;
 
         public Vector2 Position => GetPosition();
 
-        private INodePresenter _presenter;
         private IEnumerable<KeyValuePair<NodeView, float>> _nodeViews;
-        private List<GameObject> lines = new List<GameObject>();
+        private List<GameObject> _lines = new List<GameObject>();
 
         private bool _isPlayerStay = false;
+
+        private INodesPresenter _nodesPresenter;
         
-        [Inject]
-        private void Construct(INodePresenter presenter)
+        
+        public void Init(int id, INodesPresenter presenter)
         {
-            _presenter = presenter;
-        }
-        public void Init()
-        {
-            if (_isPlayerStay)
-            {
-                CreatePlayerEdges();
-            }
+            _id = id;
+            _nodesPresenter = presenter;
         }
 
         private void RenderEdges()
         {
-            lines.ForEach(x => x.gameObject.SetActive(true));
+            _lines.ForEach(x => x.gameObject.SetActive(true));
         }
 
         private void CreateEdges()
         {
-            CreateEdge( Color.green, this.gameObject.transform);
+            CreateEdge( Color.green, gameObject.transform);
         }
 
-        private void CreatePlayerEdges()
+        public void CreatePlayerEdges()
         {
             var obj = new GameObject();
             obj.transform.SetParent(gameObject.transform.parent.parent);
@@ -65,7 +58,7 @@ namespace Views.Jump
                 lineRenderer.SetPosition(1, new Vector3(pos.x, pos.y, -1));
                 lineRenderer.startColor=color;
                 
-                lines.Add(line);
+                _lines.Add(line);
             }
         }
         
@@ -74,7 +67,7 @@ namespace Views.Jump
         {
             if (_isPlayerStay) return;
 
-            if (lines.Count == 0)
+            if (_lines.Count == 0)
             {
                 CreateEdges();
             }
@@ -88,13 +81,13 @@ namespace Views.Jump
         public void OnPointerExit()
         {
             if (_isPlayerStay) return;
-            lines.ForEach(x => x.gameObject.SetActive(false));
+            _lines.ForEach(x => x.gameObject.SetActive(false));
         }
 
         public void OnClicked()
         {
             if (_isPlayerStay) return;
-            _presenter.OnClicked(_id);
+            _nodesPresenter.OnClicked(_id);
             SceneManager.LoadSceneAsync("Battle");
         }
 
