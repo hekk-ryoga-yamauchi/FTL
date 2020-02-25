@@ -7,6 +7,10 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Framework" t="Include">
+          <e p="Aster" t="Include">
+            <e p="Aster.cs" t="Include" />
+            <e p="Node.cs" t="Include" />
+          </e>
           <e p="ButtonView.cs" t="Include" />
           <e p="PresenterBase.cs" t="Include" />
           <e p="ViewBase.cs" t="Include" />
@@ -827,6 +831,7 @@
             <e p="TitleInstaller.cs" t="Include" />
           </e>
           <e p="MasterDatas" t="Include">
+            <e p="NodeStateMasterData.cs" t="Include" />
             <e p="RoomTypeMasterData.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
@@ -869,6 +874,7 @@
               <e p="DoorView.cs" t="Include" />
               <e p="GameView.cs" t="Include" />
               <e p="JumpButtonView.cs" t="Include" />
+              <e p="RoomsView.cs" t="Include" />
               <e p="RoomView.cs" t="Include" />
               <e p="UnitsView.cs" t="Include" />
               <e p="UnitView.cs" t="Include" />
