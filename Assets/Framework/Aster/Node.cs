@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MasterDatas;
+using UnityEngine;
 using Views.Main;
 
 namespace Framework
@@ -50,27 +51,27 @@ namespace Framework
             return _roomView;
         }
 
-        public void SetCost(int cost)
+        public void AddCost(int cost)
         {
-            _cost = cost;
+            _cost += cost;
         }
 
         // 推定コスト,スタートノードからこのノードを経由してゴールノードに到達するまでの推定最小コスト(最短距離)
         public double GetEstimationCost(Node startNode, Node goalNode)
         {
-            var fromStartCost = GetCost(startNode, this);
-            var toGoalCost = GetCost(this, goalNode);
+            var fromStartCost = _cost;
+            var toGoalCost = GetToGoalCost(this, goalNode);
             return fromStartCost + toGoalCost;
         }
 
-        public double GetCost(Node from, Node to)
+        public double GetToGoalCost(Node from, Node to)
         {
-            // var a = from.GetRoomView();
-            // var startPos = from.GetRoomView().transform.position;
-            // var position = to.GetRoomView().transform.position;
-            // return Mathf.Sqrt(Mathf.Pow(startPos.x - position.x, 2) +
-            //                   Mathf.Pow(startPos.y - position.y, 2));
-            return _cost;
+            var startPos = from.GetRoomView().transform.position;
+            var endPos = to.GetRoomView().transform.position;
+            var result =  Mathf.Sqrt(Mathf.Pow(startPos.x - endPos.x, 2) +
+                       Mathf.Pow(startPos.y - endPos.y, 2));
+            Debug.Log(from+ "から" + to + "までの距離は" + result);
+            return result;
         }
 
         public Node[] GetPath(List<Node> children)
@@ -83,14 +84,6 @@ namespace Framework
             children.Add(this);
             return _parent.GetPath(children);
         }
-
-
-        // 推定コスト、Estimationコストの候補になる
-        // public double GetCandidateEstimationCost(double cost)
-        // {
-        //     
-        // }
-
 
         private void SetNearRooms(List<Node> allNodes)
         {
@@ -150,7 +143,7 @@ namespace Framework
         public override string ToString()
         {
             var stringBuilder = new StringBuilder();
-            stringBuilder.AppendLine($"Id : {Id},");
+            stringBuilder.Append($"Id : {Id}");
             return stringBuilder.ToString();
         }
     }

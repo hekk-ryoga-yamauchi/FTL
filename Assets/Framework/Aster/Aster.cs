@@ -19,10 +19,15 @@ namespace Framework
         private static List<Node> _allNodes;
         private static List<RoomView> _result;
 
-        public static List<RoomView> Start(RoomView startRoomView, RoomView goalRoomView, RoomView[] roomViews)
+
+        private static void Init(RoomView[] roomViews)
         {
             _result = new List<RoomView>();
             _allNodes = new List<Node>();
+            _openNodes = new List<Node>();
+            _closedNodes = new List<Node>();
+            
+            
             foreach (var room in roomViews)
             {
                 _allNodes.Add(new Node(room));
@@ -32,29 +37,33 @@ namespace Framework
             {
                 node.Init(_allNodes);
             }
+        }
+
+        public static List<RoomView> Start(RoomView startRoomView, RoomView goalRoomView, RoomView[] roomViews)
+        {
+            Init(roomViews);
 
             _startNode = _allNodes.FirstOrDefault(x => x.Id == startRoomView.GetId());
             _goalNode = _allNodes.FirstOrDefault(x => x.Id == goalRoomView.GetId());
-            _openNodes = new List<Node>();
-            _closedNodes = new List<Node>();
-
-
+            
             _openNodes.Add(_startNode);
             _startNode.SetNodeState(NodeStateMasterData.Open);
-            var result = StartSearch();
+            var result = StartSearch(); // 同期処理
             var parents = result.GetPath(new List<Node>());
+
 
             foreach (var parent in parents)
             {
                 var roomView = parent.GetRoomView();
                 _result.Add(roomView);
             }
+            _result.Add(startRoomView);
 
             return _result;
         }
 
 
-        // 探索を開始する
+        // 探索の開始
         private static Node StartSearch()
         {
             // オープンノードがなくなれば探索失敗
@@ -66,6 +75,7 @@ namespace Framework
 
             // Openリストから最小の推定コストを持つノードを抽出し、親ノードにする。
             var parentNode = GetParentNode();
+            Debug.Log(parentNode);
 
             //親ノードがgoalなら探索終了
             if (parentNode.Id == _goalNode.Id)
@@ -81,28 +91,18 @@ namespace Framework
 
             //子ノードを求める(親のーどに隣接して移動可能な全てのノード)
             var children = parentNode.GetChildren(_allNodes);
-
-
+            
             foreach (var node in children)
             {
                 if (node == null) break;
-                // var cost = roomView.GetEstimationCost();
+                node.AddCost(1);
 
                 if (node.GetNodeState() == NodeStateMasterData.None)
                 {
                     // 子ノードをOpenリストに追加
                     // 子ノードの親をnとして追加
                     _openNodes.Add(node);
-                    node.SetCost(1);
                     node.SetParent(parentNode);
-                }
-                else if (node.GetNodeState() == NodeStateMasterData.Open
-                ) // && 仮推定とスタートノードから子ノード$m$を経由してゴールノードに到達するまでの推定最小コスト(最短距離))
-                {
-                }
-                else if (node.GetNodeState() == NodeStateMasterData.Closed
-                ) // && 仮推定とスタートノードから子ノード$m$を経由してゴールノードに到達するまでの推定最小コスト(最短距離)) && )
-                {
                 }
             }
 
