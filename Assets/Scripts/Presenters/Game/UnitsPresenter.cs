@@ -12,14 +12,14 @@ namespace Presenters.Game
 
         private UnitsView _unitsView;
 
-        public UnitsPresenter(GameModel gameModel, UnitsView unitsView)
+        public UnitsPresenter(GameModel gameModel, UnitsView unitsView, SelectUnitView selectUnitView)
         {
             _unitsView = unitsView;
             _gameModel = gameModel;
             var units = gameModel.UnitsModel.GetUnitModels();
             foreach (var unitModel in units)
             {
-                var presenter = new UnitPresenter(gameModel, unitModel);
+                var presenter = new UnitPresenter(gameModel, unitModel,selectUnitView);
                 var unitView = _unitsView.CreateUnitView(presenter);
                 presenter.Init(unitView);
                 _units.Add(presenter);

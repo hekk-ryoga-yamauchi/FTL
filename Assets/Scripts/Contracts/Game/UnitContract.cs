@@ -5,6 +5,7 @@ namespace Contracts.Game
         int Damage(int damage);
         int GetId();
         int GetHp();
+        void SetSelectUnit();
     }
 
     public interface IUnitModel

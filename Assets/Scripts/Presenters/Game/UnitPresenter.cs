@@ -9,11 +9,13 @@ namespace Presenters.Game
         private GameModel _gameModel;
         private IUnitModel _model;
         private UnitView _unitView;
+        private SelectUnitView _selectUnitView;
 
-        public UnitPresenter(GameModel gameModel, IUnitModel model)
+        public UnitPresenter(GameModel gameModel, IUnitModel model, SelectUnitView selectUnitView)
         {
             _gameModel = gameModel;
             _model = model;
+            _selectUnitView = selectUnitView;
         }
         
         public void Init(UnitView unitView)
@@ -34,6 +36,11 @@ namespace Presenters.Game
         public int GetHp()
         {
             return _model.GetHp();
+        }
+
+        public void SetSelectUnit()
+        {
+            _selectUnitView.ChangeSelecting();
         }
     }
 }

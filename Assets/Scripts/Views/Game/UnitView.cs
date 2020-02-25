@@ -17,6 +17,9 @@ namespace Views.Main
         [SerializeField]
         private Slider _hpSlider;
 
+        [SerializeField]
+        private Button _button;
+
 
         public void Init(IUnitPresenter presenter)
         {
@@ -25,6 +28,7 @@ namespace Views.Main
             _hp = presenter.GetHp();
             _hpSlider.maxValue = _hp;
             UpdateSlider();
+            _button.onClick.AddListener(presenter.SetSelectUnit);
         }
 
         public void Damage(int damage)
@@ -37,5 +41,6 @@ namespace Views.Main
         {
             _hpSlider.value = _hp;
         }
+
     }
 }
