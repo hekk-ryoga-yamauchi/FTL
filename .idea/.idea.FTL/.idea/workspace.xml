@@ -4,10 +4,6 @@
     <list default="true" id="48d74ae6-fddd-4ae2-8908-72fc15994921" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FTL/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FTL/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Framework/Aster/Aster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Framework/Aster/Aster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Framework/Aster/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Framework/Aster/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenters/Game/UnitPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenters/Game/UnitPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Game/RoomView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Game/RoomView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Views/Game/UnitView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Views/Game/UnitView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,13 +122,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Presenters/Game/UnitsPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/BattleInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Framework/Aster/Node.cs" />
-        <option value="$PROJECT_DIR$/Assets/Framework/Aster/Aster.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Battle/BattleView.cs" />
         <option value="$PROJECT_DIR$/Assets/Framework/ButtonView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Game/RoomView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Game/UnitView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Presenters/Game/UnitPresenter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Views/Game/RoomsView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Views/Game/RoomView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Framework/Aster/Aster.cs" />
       </list>
     </option>
   </component>
@@ -178,7 +174,7 @@
       <updated>1581909380524</updated>
       <workItem from="1581909384565" duration="14748000" />
       <workItem from="1582254405594" duration="34094000" />
-      <workItem from="1582711770611" duration="5891000" />
+      <workItem from="1582711770611" duration="6768000" />
     </task>
     <servers />
   </component>
@@ -353,10 +349,10 @@
           <line>30</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Framework/Aster/Aster.cs" initialLine="30">
             <startOffsets>
-              <option value="916" />
+              <option value="902" />
             </startOffsets>
             <endOffsets>
-              <option value="917" />
+              <option value="903" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />

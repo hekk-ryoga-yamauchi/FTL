@@ -11,6 +11,7 @@ namespace Framework
      */
     public class Aster
     {
+        private int cnt = 0;
         public Node[] Exec(Node startNode, Node targetNode, List<Node> allNodes)
         {
             var _openNodes = new List<Node>();
@@ -20,7 +21,6 @@ namespace Framework
             startNode.SetNodeState(NodeStateMasterData.Open);
             var result = StartSearch(_openNodes, _closedNodes, allNodes.ToList(), targetNode); // 同期処理
             var path = result.GetPath(new List<Node>());
-            // _result.Add(startRoomView);
             return path;
         }
 
@@ -32,6 +32,7 @@ namespace Framework
             // オープンノードがなくなれば探索失敗
             while (_openNodes.Count != 0)
             {
+                Debug.Log(cnt++);
                 // Openリストから最小の推定コストを持つノードを抽出し、親ノードにする。
                 var currentNode = GetParentNode(_openNodes);
                 // Debug.Log(currentNode);
@@ -52,21 +53,36 @@ namespace Framework
 
                 foreach (var node in children)
                 {
+                    var currentEstimationCost = currentNode.GetEstimationCost(currentNode.GetCost(), _goalNode);
+                    // 状態がNoneのとき、Openに入れる
                     if (node.GetNodeState() == NodeStateMasterData.None)
                     {
                         // 子ノードをOpenリストに追加
                         // 子ノードの親をnとして追加
                         _openNodes.Add(node);
                         node.SetParent(currentNode);
-                        node.SetCost(currentNode.GetEstimationCost(currentNode.GetCost() ,_goalNode) + 1.0f);
+                        node.SetCost(currentEstimationCost + 1.0f);
+                        node.SetNodeState(NodeStateMasterData.Open);
                     }
+                    // 状態がClosedで、そのnodeに設定されているcostよりcurrentのcostの方が低い場合経路を更新
                     else if (
                         node.GetNodeState() == NodeStateMasterData.Closed && 
-                        node.GetCost() > node.GetEstimationCost(currentNode.GetCost(),_goalNode))
+                        node.GetCost() > currentEstimationCost)
                     {
+                        
                         _closedNodes.Remove(node);
                         _openNodes.Add(node);
-                        node.SetCost(currentNode.GetEstimationCost(currentNode.GetCost() ,_goalNode) + 1.0f);
+                        node.SetParent(currentNode);
+                        node.SetCost(currentEstimationCost + 1.0f);
+                        node.SetNodeState(NodeStateMasterData.Open);
+
+                    }
+                    // 状態がOpenで、そのnodeに設定されているコストよりcurrentのcostが低い場合更新
+                    else if (node.GetNodeState() == NodeStateMasterData.Open &&
+                             node.GetCost() > currentEstimationCost)
+                    {
+                        node.SetParent(currentNode);
+                        node.SetCost(currentEstimationCost + 1.0f);
                     }
                 }
             }
