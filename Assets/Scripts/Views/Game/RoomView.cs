@@ -1,4 +1,6 @@
-﻿using Framework;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Framework;
 using MasterDatas;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,6 +48,34 @@ namespace Views.Main
         public int GetId()
         {
             return _id;
+        }
+
+        public Node GetNode()
+        {
+            return new Node(_id, transform.position, GetNeighborsId());
+        }
+
+        public int[] GetNeighborsId()
+        {
+            List<int> list = new List<int>();
+            if (_right != null)
+            {
+                list.Add(_right.GetId());
+            }
+            if (_left != null)
+            {
+                list.Add(_left.GetId());
+            }
+            if (_up != null)
+            {
+                list.Add(_up.GetId());
+            }
+            if (_under != null)
+            {
+                list.Add(_under.GetId());
+            }
+            
+            return list.ToArray();
         }
     }
 }

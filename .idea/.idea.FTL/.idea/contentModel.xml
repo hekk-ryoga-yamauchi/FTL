@@ -4,13 +4,14 @@
     <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_FTL.445286559.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
-      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Framework" t="Include">
           <e p="Aster" t="Include">
             <e p="Aster.cs" t="Include" />
             <e p="Node.cs" t="Include" />
+            <e p="NodeStateMasterData.cs" t="Include" />
           </e>
+          <e p="Aster.asmdef" t="Include" />
           <e p="ButtonView.cs" t="Include" />
           <e p="PresenterBase.cs" t="Include" />
           <e p="ViewBase.cs" t="Include" />
@@ -830,8 +831,8 @@
             <e p="ProjectInstaller.cs" t="Include" />
             <e p="TitleInstaller.cs" t="Include" />
           </e>
+          <e p="main.asmdef" t="Include" />
           <e p="MasterDatas" t="Include">
-            <e p="NodeStateMasterData.cs" t="Include" />
             <e p="RoomTypeMasterData.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
@@ -890,7 +891,9 @@
           </e>
         </e>
       </e>
+      <e p="Aster.csproj" t="IncludeRecursive" />
       <e p="FTL.sln" t="IncludeFlat" />
+      <e p="main.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp/bin" t="ExcludeRecursive" />

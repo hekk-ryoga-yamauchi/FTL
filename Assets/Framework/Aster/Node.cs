@@ -3,32 +3,28 @@ using System.Linq;
 using System.Text;
 using MasterDatas;
 using UnityEngine;
-using Views.Main;
 
 namespace Framework
 {
     public class Node
     {
         public int Id;
-        private RoomView _roomView;
-        private Node _right;
-        private Node _left;
-        private Node _up;
-        private Node _under;
+        private int[] _neighborsId;
         private Node _parent;
         private double _cost;
+        private Vector2 _position;
 
         private NodeStateMasterData _state;
 
-        public Node(RoomView roomView)
+        public Node(int id, Vector2 position, int[] neighborsId)
         {
-            _roomView = roomView;
-            Id = roomView.GetId();
+            Id = id;
+            _position = position;
+            _neighborsId = neighborsId;
         }
-
-        public void Init(List<Node> allNodes)
+        public Vector2 GetPosition()
         {
-            SetNearRooms(allNodes);
+            return _position;
         }
 
         public NodeStateMasterData GetNodeState()
@@ -45,19 +41,14 @@ namespace Framework
         {
             _parent = parent;
         }
-
-        public RoomView GetRoomView()
+        
+        public void SetCost(double cost)
         {
-            return _roomView;
-        }
-
-        public void AddCost(int cost)
-        {
-            _cost += cost;
+            _cost = cost;
         }
 
         // 推定コスト,スタートノードからこのノードを経由してゴールノードに到達するまでの推定最小コスト(最短距離)
-        public double GetEstimationCost(Node startNode, Node goalNode)
+        public double GetEstimationCost(Node goalNode)
         {
             var fromStartCost = _cost;
             var toGoalCost = GetToGoalCost(this, goalNode);
@@ -66,10 +57,9 @@ namespace Framework
 
         public double GetToGoalCost(Node from, Node to)
         {
-            var startPos = from.GetRoomView().transform.position;
-            var endPos = to.GetRoomView().transform.position;
-            var result =  Mathf.Sqrt(Mathf.Pow(startPos.x - endPos.x, 2) +
-                       Mathf.Pow(startPos.y - endPos.y, 2));
+            var startPos = from.GetPosition();
+            var endPos = to.GetPosition();
+            var result = Vector2.Distance(startPos, endPos);
             Debug.Log(from+ "から" + to + "までの距離は" + result);
             return result;
         }
@@ -85,59 +75,17 @@ namespace Framework
             return _parent.GetPath(children);
         }
 
-        private void SetNearRooms(List<Node> allNodes)
+        public Node[] GetChildren(List<Node> all)
         {
-            if (_roomView._right != null)
+            var list = new List<Node>();
+            foreach (var node in all)
             {
-                _right = allNodes.FirstOrDefault(x => x.Id == _roomView._right.GetId());
+                if (_neighborsId.Contains(node.Id))
+                {
+                    list.Add(node);
+                }
             }
-
-            if (_roomView._left != null)
-            {
-                _left = allNodes.FirstOrDefault(x => x.Id == _roomView._left.GetId());
-            }
-
-            if (_roomView._up != null)
-            {
-                _up = allNodes.FirstOrDefault(x => x.Id == _roomView._up.GetId());
-            }
-
-            if (_roomView._under != null)
-            {
-                _under = allNodes.FirstOrDefault(x => x.Id == _roomView._under.GetId());
-            }
-        }
-
-        public Node[] GetChildren(List<Node> allNodes)
-        {
-            SetNearRooms(allNodes);
-            Node[] nodes = new Node[4];
-            int cnt = 0;
-            if (_right != null)
-            {
-                nodes[cnt] = _right;
-                cnt++;
-            }
-
-            if (_left != null)
-            {
-                nodes[cnt] = _left;
-                cnt++;
-            }
-
-            if (_up != null)
-            {
-                nodes[cnt] = _up;
-                cnt++;
-            }
-
-            if (_under != null)
-            {
-                nodes[cnt] = _under;
-                cnt++;
-            }
-
-            return nodes;
+            return list.ToArray();
         }
 
         public override string ToString()

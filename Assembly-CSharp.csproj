@@ -63,43 +63,6 @@
      <Compile Include="Assets\Framework\ButtonView.cs" />
      <Compile Include="Assets\Framework\PresenterBase.cs" />
      <Compile Include="Assets\Framework\ViewBase.cs" />
-     <Compile Include="Assets\Scripts\Contracts\Game\UnitContract.cs" />
-     <Compile Include="Assets\Scripts\Contracts\Game\UnitsContract.cs" />
-     <Compile Include="Assets\Scripts\Contracts\Jump\JumpContract.cs" />
-     <Compile Include="Assets\Scripts\Contracts\Jump\NodeContract.cs" />
-     <Compile Include="Assets\Scripts\Contracts\Jump\NodesContract.cs" />
-     <Compile Include="Assets\Scripts\Installers\BattleInstaller.cs" />
-     <Compile Include="Assets\Scripts\Installers\CustomInstaller.cs" />
-     <Compile Include="Assets\Scripts\Installers\GameInstaller.cs" />
-     <Compile Include="Assets\Scripts\Installers\JumpInstaller.cs" />
-     <Compile Include="Assets\Scripts\Installers\ProjectInstaller.cs" />
-     <Compile Include="Assets\Scripts\Installers\TitleInstaller.cs" />
-     <Compile Include="Assets\Scripts\MasterDatas\NodeStateMasterData.cs" />
-     <Compile Include="Assets\Scripts\MasterDatas\RoomTypeMasterData.cs" />
-     <Compile Include="Assets\Scripts\Models\Game\PlayerModel.cs" />
-     <Compile Include="Assets\Scripts\Models\Game\UnitModel.cs" />
-     <Compile Include="Assets\Scripts\Models\Game\UnitsModel.cs" />
-     <Compile Include="Assets\Scripts\Models\GameModel.cs" />
-     <Compile Include="Assets\Scripts\Models\Jump\NodeModel.cs" />
-     <Compile Include="Assets\Scripts\Models\Jump\NodesModel.cs" />
-     <Compile Include="Assets\Scripts\Presenters\Game\UnitPresenter.cs" />
-     <Compile Include="Assets\Scripts\Presenters\Game\UnitsPresenter.cs" />
-     <Compile Include="Assets\Scripts\Presenters\Jump\NodesPresenter.cs" />
-     <Compile Include="Assets\Scripts\Repositories\RoomTypeMasterDataRepository.cs" />
-     <Compile Include="Assets\Scripts\ViewModels\Jump\NodesViewModel.cs" />
-     <Compile Include="Assets\Scripts\Views\Battle\BattleView.cs" />
-     <Compile Include="Assets\Scripts\Views\Custom\CustomView.cs" />
-     <Compile Include="Assets\Scripts\Views\Game\DoorView.cs" />
-     <Compile Include="Assets\Scripts\Views\Game\GameView.cs" />
-     <Compile Include="Assets\Scripts\Views\Game\JumpButtonView.cs" />
-     <Compile Include="Assets\Scripts\Views\Game\RoomView.cs" />
-     <Compile Include="Assets\Scripts\Views\Game\RoomsView.cs" />
-     <Compile Include="Assets\Scripts\Views\Game\SelectUnitView.cs" />
-     <Compile Include="Assets\Scripts\Views\Game\UnitView.cs" />
-     <Compile Include="Assets\Scripts\Views\Game\UnitsView.cs" />
-     <Compile Include="Assets\Scripts\Views\Jump\NodeView.cs" />
-     <Compile Include="Assets\Scripts\Views\Jump\NodesView.cs" />
-     <Compile Include="Assets\Scripts\Views\Title\TitleView.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/hekk339/projects/practice/FTL/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -691,6 +654,10 @@
     <ProjectReference Include="Zenject.csproj">
       <Project>{B57C8BF6-78E1-62F8-2B30-1EA0B6DB93B3}</Project>
       <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="main.csproj">
+      <Project>{F09B7E59-C0B5-A210-D660-4734102A4ED2}</Project>
+      <Name>main</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
