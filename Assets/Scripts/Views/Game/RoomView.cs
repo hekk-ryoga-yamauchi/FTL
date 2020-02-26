@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Framework;
 using MasterDatas;
 using UnityEngine;
@@ -31,12 +30,13 @@ namespace Views.Main
         private void Start()
         {
             _button = GetComponent<Button>();
-            _button.onClick.AddListener(OnClick);
+            _button.onClick.AddListener(On);
             _roomsView = transform.parent.GetComponent<RoomsView>();
         }
         
-        public  override void OnClick()
+        public  void On()
         {
+            Debug.Log("呼ばれたよ");
              _roomsView.OnClicked(_id);
         }
 
@@ -76,6 +76,11 @@ namespace Views.Main
             }
             
             return list.ToArray();
+        }
+
+        public override void OnClick()
+        {
+            
         }
     }
 }

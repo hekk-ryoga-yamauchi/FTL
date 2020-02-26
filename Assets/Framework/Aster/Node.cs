@@ -46,13 +46,17 @@ namespace Framework
         {
             _cost = cost;
         }
+        
+        public double GetCost()
+        {
+            return _cost;
+        }
 
         // 推定コスト,スタートノードからこのノードを経由してゴールノードに到達するまでの推定最小コスト(最短距離)
-        public double GetEstimationCost(Node goalNode)
+        public double GetEstimationCost(double cost, Node goalNode)
         {
-            var fromStartCost = _cost;
             var toGoalCost = GetToGoalCost(this, goalNode);
-            return fromStartCost + toGoalCost;
+            return  cost + toGoalCost;
         }
 
         public double GetToGoalCost(Node from, Node to)
@@ -60,7 +64,7 @@ namespace Framework
             var startPos = from.GetPosition();
             var endPos = to.GetPosition();
             var result = Vector2.Distance(startPos, endPos);
-            Debug.Log(from+ "から" + to + "までの距離は" + result);
+            // Debug.Log(from+ "から" + to + "までの距離は" + result);
             return result;
         }
 
@@ -94,5 +98,7 @@ namespace Framework
             stringBuilder.Append($"Id : {Id}");
             return stringBuilder.ToString();
         }
+
+        
     }
 }

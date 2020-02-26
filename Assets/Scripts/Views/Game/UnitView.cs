@@ -54,7 +54,7 @@ namespace Views.Main
             foreach (var room in roomView)
             {
                 var pos = gameObject.transform.position;
-                for (int i = 0; i < 30; i++)
+                for (var i = 0; i < 30; i += 1)
                 {
                     yield return null;
                     var target = Vector3.Lerp(pos, room.transform.position, i);
