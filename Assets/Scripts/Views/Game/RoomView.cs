@@ -24,21 +24,18 @@ namespace Views.Main
         
         private Button _button;
 
-        public bool IsOpen { get; private set; }
-        public RoomView Parent { get; private set; }
-        public NodeStateMasterData State { get; private set; } = NodeStateMasterData.None;
-        
-        
+        private RoomsView _roomsView;
 
         private void Start()
         {
             _button = GetComponent<Button>();
             _button.onClick.AddListener(OnClick);
+            _roomsView = transform.parent.GetComponent<RoomsView>();
         }
         
         public  override void OnClick()
         {
-            
+             _roomsView.OnClicked(_id);
         }
 
         public Vector2 GetPosition()

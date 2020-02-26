@@ -1,6 +1,10 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using Contracts.Game;
 using Framework;
 using UnityEngine;
+using Zenject;
 
 namespace Views.Main
 {
@@ -8,20 +12,25 @@ namespace Views.Main
     {
         private List<RoomView> _list = new List<RoomView>();
 
-        [SerializeField]
-        private RoomView _startRoom;
+        private IUnitsPresenter _unitPresenter;
+        private RoomView[] _roomViews;
 
-        [SerializeField]
-        private RoomView _goalRoom;
-
-        private void Start()
+        
+        [Inject]
+        private void Construct(IUnitsPresenter unitPresenter)
         {
-            var children = GetComponentsInChildren<RoomView>();
-            var nodes = Aster.Start(_startRoom,_goalRoom,children);
-            foreach (var node in nodes)
-            {
-                Debug.Log(node.GetId());
-            }
+            _unitPresenter = unitPresenter;
+            
+        }
+
+        public void OnClicked(int roomId)
+        {
+            _roomViews = GetComponentsInChildren<RoomView>();
+            var unitRoom = _roomViews.FirstOrDefault(x => x.GetId() == _unitPresenter.GetUnitRoomId(0));
+            var targetRoom = _roomViews.FirstOrDefault(x => x.GetId() == roomId);
+            var rooms =  Aster.Start(unitRoom,targetRoom,_roomViews).ToArray();
+            Array.Reverse(rooms);
+            _unitPresenter.MoveUnit(rooms.ToList());
         }
     }
 }

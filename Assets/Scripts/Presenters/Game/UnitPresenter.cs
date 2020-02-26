@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Contracts.Game;
 using Models;
 using Views.Main;
@@ -41,6 +42,17 @@ namespace Presenters.Game
         public void SetSelectUnit()
         {
             _selectUnitView.ChangeSelecting();
+        }
+
+        public int GetUnitRoomId()
+        {
+            return _model.GetRoomId();
+        }
+
+        public void Move(List<RoomView> roomView)
+        {
+            _model.SetRoomId(roomView[roomView.Count-1].GetId());
+            _unitView.Move(roomView);
         }
     }
 }

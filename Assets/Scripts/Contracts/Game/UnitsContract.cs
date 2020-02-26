@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Models.Game;
+using Views.Main;
 
 namespace Contracts.Game
 {
@@ -10,6 +11,7 @@ namespace Contracts.Game
 
     public interface IUnitsPresenter
     {
-        
+        int GetUnitRoomId(int id);
+        void MoveUnit(List<RoomView> roomView);
     }
 }

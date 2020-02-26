@@ -8,11 +8,13 @@ namespace Models.Game
         private int _id;
         private int _hp;
         private RoomTypeMasterData _currentRoom;
+        private int _roomId;
 
-        public UnitModel(int id, int hp)
+        public UnitModel(int id, int hp, int roomId)
         {
             _id = id;
             _hp = hp;
+            _roomId = roomId;
         }
 
         public int Damage(int damage)
@@ -28,6 +30,16 @@ namespace Models.Game
         public int GetHp()
         {
             return _hp;
+        }
+
+        public int GetRoomId()
+        {
+            return _roomId;
+        }
+
+        public void SetRoomId(int getId)
+        {
+            _roomId = getId;
         }
     }
 }

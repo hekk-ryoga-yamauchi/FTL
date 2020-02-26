@@ -6,6 +6,7 @@ namespace Contracts.Game
         int GetId();
         int GetHp();
         void SetSelectUnit();
+        int GetUnitRoomId();
     }
 
     public interface IUnitModel
@@ -13,5 +14,7 @@ namespace Contracts.Game
         int Damage(int damage);
         int GetId();
         int GetHp();
+        int GetRoomId();
+        void SetRoomId(int getId);
     }
 }

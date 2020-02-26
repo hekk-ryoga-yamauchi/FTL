@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using Contracts.Game;
 using Framework;
 using MasterDatas;
@@ -42,5 +44,23 @@ namespace Views.Main
             _hpSlider.value = _hp;
         }
 
+        public void Move(List<RoomView> roomView)
+        {
+            StartCoroutine(PlayAnimation(roomView));
+        }
+
+        private IEnumerator PlayAnimation(List<RoomView> roomView)
+        {
+            foreach (var room in roomView)
+            {
+                var pos = gameObject.transform.position;
+                for (int i = 0; i < 30; i++)
+                {
+                    yield return null;
+                    var target = Vector3.Lerp(pos, room.transform.position, i);
+                    gameObject.transform.position = target;
+                }
+            }
+        }
     }
 }

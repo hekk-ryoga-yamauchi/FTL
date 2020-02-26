@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using Contracts.Game;
 using Models;
+using UnityEngine;
 using Views.Main;
 
 namespace Presenters.Game
@@ -24,6 +26,18 @@ namespace Presenters.Game
                 presenter.Init(unitView);
                 _units.Add(presenter);
             }
+        }
+
+        public void MoveUnit(List<RoomView> roomView)
+        {
+           var unit =  _units[0];
+           unit.Move(roomView);
+        }
+
+        public int GetUnitRoomId(int id)
+        {
+            var unit = _units.FirstOrDefault(x => x.GetId() == id);
+            return unit.GetUnitRoomId();
         }
     }
 }

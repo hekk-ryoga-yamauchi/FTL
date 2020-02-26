@@ -876,6 +876,7 @@
               <e p="JumpButtonView.cs" t="Include" />
               <e p="RoomsView.cs" t="Include" />
               <e p="RoomView.cs" t="Include" />
+              <e p="SelectUnitView.cs" t="Include" />
               <e p="UnitsView.cs" t="Include" />
               <e p="UnitView.cs" t="Include" />
             </e>

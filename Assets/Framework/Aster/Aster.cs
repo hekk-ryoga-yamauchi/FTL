@@ -51,13 +51,13 @@ namespace Framework
             var result = StartSearch(); // 同期処理
             var parents = result.GetPath(new List<Node>());
 
+            // _result.Add(startRoomView);
 
             foreach (var parent in parents)
             {
                 var roomView = parent.GetRoomView();
                 _result.Add(roomView);
             }
-            _result.Add(startRoomView);
 
             return _result;
         }
